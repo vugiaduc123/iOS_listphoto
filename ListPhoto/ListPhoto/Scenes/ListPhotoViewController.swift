@@ -90,6 +90,7 @@ extension ListPhotoViewController {
         searchBar.barTintColor = UIColor.white
         searchBar.tintColor = .red
         searchBar.showsCancelButton = true
+        searchBar.disableSwipeTyping()
         if #available(iOS 13.0, *) {
             searchBar.searchTextField.keyboardType = .alphabet
         } else {
@@ -245,14 +246,16 @@ extension ListPhotoViewController: UITableViewDelegate {
 extension ListPhotoViewController: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        let validCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&amp;*():.,&lt;&gt;/\\[]? "
-//        let filteredText = searchText.filter { validCharacters.contains($0) }
-        let filteredText = searchText
+        let validCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&amp;*():.,&lt;&gt;/\\[]? "
+        let filteredText = searchText.filter { validCharacters.contains($0) }
+//        let filteredText = validCharacters
         let removeTelex = viewModel.removeDiacritics(from: filteredText, completion: { result in
             self.showAlert(title: "Thông báo", message: "Vui lòng không được nhập kí tự có dấu!!!")
+            return
         })
         let special = viewModel.removeAmpersandEntity(from: removeTelex, completion: {   result in
             self.showAlert(title: "Thông báo", message: "Vui lòng không được nhập có kiểu kí tự &amp; và emoji!!!")
+            return
         })
         if special.count > 15 {
             searchBar.text = String(special.prefix(15))
@@ -265,7 +268,6 @@ extension ListPhotoViewController: UISearchBarDelegate {
         searchWorkItem = workItem
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: workItem)
         searchBar.text = special
-
     }
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -284,12 +286,12 @@ extension ListPhotoViewController: UISearchBarDelegate {
         amountPagelb.text = "0/\(viewModel.listPhoto.count)"
 
     }
-
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string.count > 1 {
+            return false
+        }
         return true
     }
-
 }
 
 // MARK: Function
