@@ -30,6 +30,7 @@
 		B11BAAF32D11B00800F50D79 /* CustomIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11BAAF22D11B00800F50D79 /* CustomIndicator.swift */; };
 		B11BAAF62D12E30500F50D79 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11BAAF52D12E30500F50D79 /* NetworkMonitor.swift */; };
 		B11BAAF82D13076D00F50D79 /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11BAAF72D13076D00F50D79 /* CacheHelper.swift */; };
+		B18F133B2D1369FD004F3BC1 /* SearchBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F133A2D1369FD004F3BC1 /* SearchBarHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		B11BAAF22D11B00800F50D79 /* CustomIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicator.swift; sourceTree = "<group>"; };
 		B11BAAF52D12E30500F50D79 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		B11BAAF72D13076D00F50D79 /* CacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
+		B18F133A2D1369FD004F3BC1 /* SearchBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 				B11BAAE52D10243D00F50D79 /* UIImageView.swift */,
 				B11BAAE72D111A2C00F50D79 /* String.swift */,
 				B11BAAEF2D11A7FC00F50D79 /* Notification.swift */,
+				B18F133A2D1369FD004F3BC1 /* SearchBarHelper.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				B11BAAD82D101BFB00F50D79 /* APIOperation.swift in Sources */,
 				B11BAAE12D101D9200F50D79 /* PhotoTableViewCell.swift in Sources */,
 				B11BAA8F2D0FF96700F50D79 /* AppDelegate.swift in Sources */,
+				B18F133B2D1369FD004F3BC1 /* SearchBarHelper.swift in Sources */,
 				B11BAAE42D10235500F50D79 /* PhotoManager.swift in Sources */,
 				B11BAAE82D111A2C00F50D79 /* String.swift in Sources */,
 				B11BAAD62D10072200F50D79 /* APIRequest.swift in Sources */,
