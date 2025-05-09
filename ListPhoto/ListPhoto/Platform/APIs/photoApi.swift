@@ -7,19 +7,20 @@
 
 import Foundation
 
-struct PhotoAPI: APIClient {
+struct PhotoListRequest: APIClient {
     
     typealias Model = [PhotoModel]
-
-    var enviroment: APIEnvironment {
-        return DefaultEnviroment()
+    
+    var environment: APIEnvironment {
+        DefaultEnviroment()
     }
-    var page: Int
-
-    var limit: Int
-
+    
     var path: String {
-        return "/v2/list?page=\(page)&amp;limit=\(limit)"
+        return "/v2/list"
+    }
+    
+    var headers: [String: String]? {
+        return nil
     }
 }
 

@@ -15,14 +15,16 @@ class PhotoViewModel {
         self.navigator = navigator
     }
     var isLoadIndicator:Bool = false
+    var page = 0
     let limitItem = 10
     var limitLoad = 15
     var limit = 2
     var listPhoto:[PhotoModel] = []
     var filteredData:[PhotoModel] = []
-    let imageCache = CustomCache<NSString, UIImage>()
-    var activeTasks: [IndexPath :URLSessionTask] = [:]
-
+//    let imageCache = CustomCache<NSString, UIImage>()
+//    var activeTasks: [IndexPath :URLSessionTask] = [:]
+    let downloader = ImageDownloader()
+    
     // MARK: API
     func getlistPhoto(placeHolder: @escaping(Bool) -> Void ) {
         placeHolder(true)
@@ -42,74 +44,14 @@ class PhotoViewModel {
             }
         }
     }
-
-    func getDownLoadURL(url: String, maxWidth: CGFloat, maxHeight: CGFloat, completionTask: @escaping ( (URLSessionDataTask) -> Void), completion: @escaping (Result <UIImage ,Error>) -> Void) {
-        if imageCache.getObjectCount() > 100 {
-            imageCache.clearCache()
-            print("imageCache===>\(imageCache.getObjectCount())")
-        }
-        if imageCache.object(forKey: url as NSString) == nil {
-            DispatchQueue.global(qos: .background).async { [weak self] in
-                guard let strongSelf = self else { return }
-                strongSelf.rest.downLoad(url: url) { task in
-                    completionTask(task)
-                } placeHolder: { placeHolder in}
-            completion: { result in
-                switch result {
-                case .success(let image):
-                    if let resizedImage = image.resizedWithAspectFit(maxWidth: maxWidth, maxHeight: maxHeight) {
-                        DispatchQueue.main.async {
-                            strongSelf.imageCache.setObject(resizedImage, forKey: url as NSString)
-                            completion(.success(resizedImage))
-                        }
-                    }
-                case .failure(let err):
-                    completion(.failure(err))
-                    return
-                }
-            }
-            }
-        } else {
-            let imageCache = imageCache.object(forKey: url as NSString)
-            completion(.success(imageCache ?? UIImage(named: "loading")!))
-        }
-    }
-
-    func fetchData(indexPath: IndexPath, taskCompletion: @escaping ((URLSessionDataTask) -> Void), placeHolder: @escaping (Bool) -> Void ) {
-        let item = self.listPhoto[indexPath.row]
-        let height = CGFloat(self.prefixNumber(number: item.height))
-        placeHolder(true)
-        self.getDownLoadURL(url: item.download_url, maxWidth: CGFloat(item.width), maxHeight: height) { task in
-            taskCompletion(task)
-        } completion: { [weak self] result in
-            guard let strongSelf = self else { return }
-            if let task = strongSelf.activeTasks[indexPath] {
-                task.cancel()
-                strongSelf.activeTasks[indexPath] = nil
-            } else {
-                print("No task for this indexPath")
-            }
-        }
-    }
-
     // MARK: Logic
 
     func prefixNumber(number: Int) -> Int{
         if number.description.count > 3 {
             return Int(String(number).prefix(3))!
-        }else{
-            return number
         }
+        return number
     }
-
-    func getHeightImage(url: String, height: Int) -> CGFloat {
-        if imageCache.object(forKey: url as NSString) == nil {
-            return 150
-        }else {
-            return CGFloat(prefixNumber(number: height))
-        }
-    }
-
     // MARK: Helper Function to Remove '&amp;' from String
 
     func removeAmpersandEntity(from string: String, completion: (Bool) -> Void) -> String {

@@ -8,24 +8,27 @@
 import Foundation
 
 protocol APIRequest {
-    var enviroment: APIEnvironment { get }
-    
+    var environment: APIEnvironment { get }
     var path: String { get }
+    var headers: [String: String]? { get }
+    func fullURL(with parameters: [String: Any]?) -> URL
 }
 
 extension APIRequest {
-    
-    var fullURL: URL {
-        let encodeHTML = enviroment.baseURL.appending(path).htmlEncoded()
-        guard let baseURL = URL(string: encodeHTML) else {
-            fatalError("Base URL is invalid")
+    func fullURL(with parameters: [String: Any]?) -> URL {
+        var components = URLComponents(string: environment.baseURL + path)
+        if let params = parameters {
+            components?.queryItems = params.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
         }
-        return baseURL
+        guard let url = components?.url else {
+            fatalError("Invalid URL")
+        }
+        return url
     }
     
     func displayInformation() {
         print("Path URL: \(path)")
-        print("Full URL: \(fullURL)")
+        print("Full URL: \(String(describing: fullURL))")
     }
     
 }
