@@ -6,53 +6,47 @@
 //
 
 import Foundation
-
 import Network
+import Combine
 
-class NetworkMonitor {
+enum NetworkStatus: String {
+    case disconnected     // ❌ Không có kết nối
+    case weakConnection   // ⚠️ Mạng yếu, chậm, thường là cellular
+    case strongConnection // ✅ Mạng ổn định, thường là Wi-Fi hoặc Ethernet
+    case normal
+}
+
+final class NetworkMonitor {
     static let shared = NetworkMonitor()
-
+    
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue.global(qos: .background)
-    private(set) var isConnected: Bool = false
-    private(set) var connectionType: ConnectionType = .unknown
-
-    enum ConnectionType {
-        case wifi
-        case cellular
-        case ethernet
-        case unknown
+    
+    private let subject = CurrentValueSubject<NetworkStatus, Never>(.normal)
+    var publisher: AnyPublisher<NetworkStatus, Never> {
+        subject
+            .removeDuplicates()
+            .dropFirst(1)
+            .eraseToAnyPublisher()
     }
-
-    private init() {}
-
-    func startMonitoring() {
+    
+    private init() {
         monitor.pathUpdateHandler = { [weak self] path in
-            self?.isConnected = path.status == .satisfied
-            self?.connectionType = self?.getConnectionType(path) ?? .unknown
-
-            if self?.isConnected == true {
-                print("Connected to the internet: \(self?.connectionType ?? .unknown)")
+            guard let self = self else { return }
+            
+            let status: NetworkStatus
+            if path.status == .unsatisfied {
+                status = .disconnected
+            } else if path.usesInterfaceType(.wifi) || path.usesInterfaceType(.wiredEthernet) {
+                status = .strongConnection
+            } else if path.usesInterfaceType(.cellular) {
+                status = .weakConnection
             } else {
-                print("No connected to the internet")
+                status = .weakConnection
             }
+            
+            self.subject.send(status)
         }
         monitor.start(queue: queue)
-    }
-
-    func stopMonitoring() {
-        monitor.cancel()
-    }
-
-    private func getConnectionType(_ path: NWPath) -> ConnectionType {
-        if path.usesInterfaceType(.wifi) {
-            return .wifi
-        } else if path.usesInterfaceType(.cellular) {
-            return .cellular
-        } else if path.usesInterfaceType(.wiredEthernet) {
-            return .ethernet
-        } else {
-            return .unknown
-        }
     }
 }
