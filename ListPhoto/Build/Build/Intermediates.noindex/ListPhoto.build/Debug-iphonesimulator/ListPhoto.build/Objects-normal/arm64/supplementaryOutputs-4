@@ -1,0 +1,30 @@
+{
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Common/ViewModelType.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ViewModelType.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ViewModelType.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ViewModelType.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ViewModelType.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ViewModelType.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/DataLayer/APIService/Enviroments/APIEnviroments.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIEnviroments.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIEnviroments.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIEnviroments.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIEnviroments.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIEnviroments.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/DataLayer/APIService/URLRequest+Ex/PinningSessionDelegate.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PinningSessionDelegate.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PinningSessionDelegate.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PinningSessionDelegate.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PinningSessionDelegate.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PinningSessionDelegate.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Modules/Navigator/GenerateListNavigator.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GenerateListNavigator.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GenerateListNavigator.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GenerateListNavigator.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GenerateListNavigator.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GenerateListNavigator.swiftdeps"
+  }
+}

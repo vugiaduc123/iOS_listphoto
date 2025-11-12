@@ -1,0 +1,30 @@
+{
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/DataLayer/APIService/Enviroments/APIRequest.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIRequest.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIRequest.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIRequest.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIRequest.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIRequest.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/DataLayer/Mapper/PhotoMapper.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoMapper.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoMapper.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoMapper.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoMapper.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoMapper.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Utilities/GraphicRecommend.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GraphicRecommend.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GraphicRecommend.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GraphicRecommend.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GraphicRecommend.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/GraphicRecommend.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Utilities/ImageDownloader.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ImageDownloader.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ImageDownloader.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ImageDownloader.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ImageDownloader.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/ImageDownloader.swiftdeps"
+  }
+}

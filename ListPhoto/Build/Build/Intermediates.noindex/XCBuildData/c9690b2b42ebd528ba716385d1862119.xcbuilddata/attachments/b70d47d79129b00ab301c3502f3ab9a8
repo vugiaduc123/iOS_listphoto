@@ -1,0 +1,29 @@
+{
+  "" : {
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests-primary.dia",
+    "emit-module-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests-primary-emit-module.dia",
+    "pch" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests-primary.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhotoUITests/ListPhotoUITests.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests.dia",
+    "index-unit-output-path" : "/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests.o",
+    "llvm-bc" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests.bc",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests.swiftdeps",
+    "swiftmodule" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITests~partial.swiftmodule"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhotoUITests/ListPhotoUITestsLaunchTests.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITestsLaunchTests.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITestsLaunchTests.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITestsLaunchTests.dia",
+    "index-unit-output-path" : "/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITestsLaunchTests.o",
+    "llvm-bc" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITestsLaunchTests.bc",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITestsLaunchTests.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITestsLaunchTests.swiftdeps",
+    "swiftmodule" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhotoUITests.build/Objects-normal/arm64/ListPhotoUITestsLaunchTests~partial.swiftmodule"
+  }
+}

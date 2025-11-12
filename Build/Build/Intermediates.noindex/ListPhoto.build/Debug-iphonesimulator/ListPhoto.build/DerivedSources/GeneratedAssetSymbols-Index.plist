@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colors</key>
+	<array/>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Resource/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameArrow</string>
+			<key>relativePath</key>
+			<string>./Arrow.imageset</string>
+			<key>swiftSymbol</key>
+			<string>arrow</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Resource/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameBgPiscum</string>
+			<key>relativePath</key>
+			<string>./background/bg_piscum.imageset</string>
+			<key>swiftSymbol</key>
+			<string>bgPiscum</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Resource/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameError</string>
+			<key>relativePath</key>
+			<string>./error.imageset</string>
+			<key>swiftSymbol</key>
+			<string>error</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Resource/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameIndicator</string>
+			<key>relativePath</key>
+			<string>./indicator.imageset</string>
+			<key>swiftSymbol</key>
+			<string>indicator</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Resource/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameLoading</string>
+			<key>relativePath</key>
+			<string>./loading.imageset</string>
+			<key>swiftSymbol</key>
+			<string>loading</string>
+		</dict>
+	</array>
+	<key>symbols</key>
+	<array/>
+</dict>
+</plist>
