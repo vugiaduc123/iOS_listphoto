@@ -1,0 +1,37 @@
+{
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/DataLayer/UseCase/APIPhotoUsecaseProvider.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIPhotoUsecaseProvider.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIPhotoUsecaseProvider.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIPhotoUsecaseProvider.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIPhotoUsecaseProvider.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/APIPhotoUsecaseProvider.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Domain/Errors/DomainImageError.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/DomainImageError.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/DomainImageError.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/DomainImageError.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/DomainImageError.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/DomainImageError.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Domain/UseCase/PhotoUseCase.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoUseCase.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoUseCase.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoUseCase.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoUseCase.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/PhotoUseCase.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Extension/Combine/SearchBar+Combine.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/SearchBar+Combine.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/SearchBar+Combine.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/SearchBar+Combine.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/SearchBar+Combine.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/SearchBar+Combine.swiftdeps"
+  },
+  "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/ListPhoto/Extension/Notification.swift" : {
+    "const-values" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/Notification.swiftconstvalues",
+    "dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/Notification.d",
+    "diagnostics" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/Notification.dia",
+    "object" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/Notification.o",
+    "swift-dependencies" : "/Users/ducvu/Desktop/Swift/iOS_listphoto/ListPhoto/Build/Build/Intermediates.noindex/ListPhoto.build/Debug-iphonesimulator/ListPhoto.build/Objects-normal/arm64/Notification.swiftdeps"
+  }
+}

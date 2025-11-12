@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 extension UISearchBar {
     func disableSwipeTyping() {
         if let textField = self.value(forKey: "searchField") as? UITextField {

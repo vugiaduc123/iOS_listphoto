@@ -15,10 +15,28 @@ class WelcomeViewController: UIViewController {
     let monitor = NWPathMonitor()
 
     var connectNetwork: Bool = false
+<<<<<<< HEAD:ListPhoto/ListPhoto/Modules/WelcomeViewController.swift
+
+    private lazy var navigator: GenerateListNavigator = {
+        var navigator = DefaultPhotoGenerateListNavigator()
+        return navigator
+    }()
+
+=======
+>>>>>>> 3404a3230b2633a709d53b397211244b9c4e1f7e:ListPhoto/ListPhoto/module/WelcomeViewController.swift
     override func viewDidLoad() {
         super.viewDidLoad()
         addView()
         setUpView()
+<<<<<<< HEAD:ListPhoto/ListPhoto/Modules/WelcomeViewController.swift
+
+        destinationBtn
+            .publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                self?.navigator.openDetailListPhoto(self?.navigationController)
+            }.store(in: &disposeBag)
+=======
+>>>>>>> 3404a3230b2633a709d53b397211244b9c4e1f7e:ListPhoto/ListPhoto/module/WelcomeViewController.swift
     }
 }
 

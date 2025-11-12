@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>11</integer>
+	<key>logs</key>
+	<dict>
+		<key>1D117FBA-575C-4ED5-BB6F-FC73ECDFAFA8</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1D117FBA-575C-4ED5-BB6F-FC73ECDFAFA8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>5</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ListPhoto project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ListPhoto</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project ListPhoto with scheme ListPhoto</string>
+			<key>timeStartedRecording</key>
+			<real>783530608.93379796</real>
+			<key>timeStoppedRecording</key>
+			<real>783530622.08355999</real>
+			<key>title</key>
+			<string>Building project ListPhoto with scheme ListPhoto</string>
+			<key>uniqueIdentifier</key>
+			<string>1D117FBA-575C-4ED5-BB6F-FC73ECDFAFA8</string>
+		</dict>
+		<key>A3401CD1-145B-4B8B-961A-E724BA89AD16</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A3401CD1-145B-4B8B-961A-E724BA89AD16.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ListPhoto project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ListPhoto</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Testing project ListPhoto with scheme ListPhoto</string>
+			<key>timeStartedRecording</key>
+			<real>783530622.15446401</real>
+			<key>timeStoppedRecording</key>
+			<real>783530626.04937899</real>
+			<key>title</key>
+			<string>Testing project ListPhoto with scheme ListPhoto</string>
+			<key>uniqueIdentifier</key>
+			<string>A3401CD1-145B-4B8B-961A-E724BA89AD16</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
