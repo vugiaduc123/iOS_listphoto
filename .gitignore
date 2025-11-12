@@ -1,0 +1,14 @@
+Build
+
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad
+*.xcscmblueprint
+
+# fastlane
+Fastlane/report.xml
+Fastlane/test_output
