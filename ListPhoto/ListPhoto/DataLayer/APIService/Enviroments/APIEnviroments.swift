@@ -21,7 +21,7 @@ struct DefaultEnviroment: APIEnvironment {
     var baseURL: String {
         return "https://picsum.photos"
     }
-    
+
     var headers: [String : String]? {
         return nil
     }

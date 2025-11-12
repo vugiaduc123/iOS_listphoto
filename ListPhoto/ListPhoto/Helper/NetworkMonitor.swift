@@ -10,18 +10,18 @@ import Network
 import Combine
 
 enum NetworkStatus: String {
-    case disconnected     // ❌ Không có kết nối
-    case weakConnection   // ⚠️ Mạng yếu, chậm, thường là cellular
-    case strongConnection // ✅ Mạng ổn định, thường là Wi-Fi hoặc Ethernet
+    case disconnected
+    case weakConnection
+    case strongConnection
     case normal
 }
 
 final class NetworkMonitor {
     static let shared = NetworkMonitor()
-    
+
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue.global(qos: .background)
-    
+
     private let subject = CurrentValueSubject<NetworkStatus, Never>(.normal)
     var publisher: AnyPublisher<NetworkStatus, Never> {
         subject
@@ -29,11 +29,11 @@ final class NetworkMonitor {
             .dropFirst(1)
             .eraseToAnyPublisher()
     }
-    
+
     private init() {
         monitor.pathUpdateHandler = { [weak self] path in
             guard let self = self else { return }
-            
+
             let status: NetworkStatus
             if path.status == .unsatisfied {
                 status = .disconnected
@@ -44,7 +44,7 @@ final class NetworkMonitor {
             } else {
                 status = .weakConnection
             }
-            
+
             self.subject.send(status)
         }
         monitor.start(queue: queue)

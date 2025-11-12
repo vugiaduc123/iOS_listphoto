@@ -14,7 +14,7 @@ public struct PhotoDTOs: Codable {
     var height: Int
     var url: String
     var downloadURL: String
-    
+
     enum CodingKeys: String, CodingKey {
         case id, author, width, height, url
         case downloadURL = "download_url"

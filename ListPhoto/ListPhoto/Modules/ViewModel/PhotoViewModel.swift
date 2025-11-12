@@ -3,27 +3,27 @@ import UIKit
 import Combine
 
 class PhotoViewModel: ViewModelType {
-    
+
     private let useCase: PhotoUseCase
-    
+
     var listPhoto: [PhotoEntity] = []
     private var filteredData: [PhotoEntity] = []
 
     private var page = 1
     private var limit = 100
     var isFiltering: Bool = false
-    
+
     let downloader = ImageDownloader.shared
-    
+
     init(useCase: PhotoUseCase) {
         self.useCase = useCase
     }
-    
+
     let errorSubject = PassthroughSubject<TrackErrors<PhotoResultType>, Never>()
     let loadingSubject = CurrentValueSubject<Bool, Never>(false)
     let photosSubject = CurrentValueSubject<[PhotoEntity], Never>([])
     let pageInfoSubject = CurrentValueSubject<String,Never>("0/0")
-    
+
     func transform(input: Input) -> Output {
         // Initial fetch
         let initial = initialTrigger(input: input)
@@ -33,9 +33,9 @@ class PhotoViewModel: ViewModelType {
         let refresh = refreshTrigger(input: input)
         // Load more
         let loadMore = loadMoreTrigger(input: input)
-        
+
         let inputTrigger = Publishers.MergeMany(initial, search, refresh, loadMore).eraseToAnyPublisher()
-        
+
         return Output(
             result: inputTrigger,
             loading: loadingSubject.eraseToAnyPublisher(),
@@ -50,7 +50,7 @@ extension PhotoViewModel {
         useCase.fetchPhotos(page: page, limit: limit)
             .eraseToAnyPublisher()
     }
-    
+
     private func getLoadMore(page: Int, limit: Int) -> AnyPublisher<[PhotoEntity], DomainAPIsError> {
         useCase.fetchPhotos(page: page, limit: limit)
             .eraseToAnyPublisher()
@@ -74,7 +74,7 @@ extension PhotoViewModel {
             }
             .eraseToAnyPublisher()
     }
-    
+
     private func initialTrigger(input: Input) -> AnyPublisher<PhotoResult, Never> {
         loadingSubject.send(true)
         return input.initialFetch
@@ -101,7 +101,7 @@ extension PhotoViewModel {
             })
             .eraseToAnyPublisher()
     }
-    
+
     private func refreshTrigger(input: Input) -> AnyPublisher<PhotoResult, Never> {
         return input.refresh
             .flatMap { [weak self] _ -> AnyPublisher<[PhotoEntity], Never> in
@@ -126,12 +126,12 @@ extension PhotoViewModel {
                 loadingSubject.send(false)
             }).eraseToAnyPublisher()
     }
-    
+
     private func loadMoreTrigger(input: Input) -> AnyPublisher<PhotoResult, Never> {
         return input.loadMore
            .filter { [weak self] _ in
                guard let self = self else { return false }
-               return !self.isFiltering 
+               return !self.isFiltering
            }
            .flatMap { [weak self] _ -> AnyPublisher<[PhotoEntity], Never> in
                guard let self = self else { return Just([]).eraseToAnyPublisher() }
@@ -171,7 +171,7 @@ extension PhotoViewModel {
         }
         return number
     }
-    
+
     func removeAmpersandEntity(from string: String, completion: @escaping (Bool) -> Void) -> String {
         let cleanString = string
             .filter { $0 != "&" } // bỏ &
@@ -184,7 +184,7 @@ extension PhotoViewModel {
         }
         return String(cleanString)
     }
-    
+
     func removeDiacritics(from string: String, completion: @escaping (Bool) -> Void) -> String {
         let diacritics: [Character: Character] = [
             "á": "a", "à": "a", "ả": "a", "ã": "a", "ạ": "a",
@@ -207,30 +207,30 @@ extension PhotoViewModel {
         }
         return removeTelex
     }
-    
+
     func performSearch(authorString: String, endSearch: Bool) {
         if endSearch {
             resetFilter()
             return
         }
-        
+
         if filteredData.isEmpty {
             filteredData = listPhoto
         }
-        
+
         listPhoto = filteredData.filter{
             $0.author.lowercased().contains(authorString.lowercased())
         }
-        
+
         if listPhoto.count == 0 {
             pageInfoSubject.send("0/0")
         } else {
             pageInfoSubject.send("0/\(listPhoto.count)")
         }
-        
+
         isFiltering = true
     }
-    
+
     func resetFilter() {
         if !filteredData.isEmpty {
             listPhoto = filteredData
@@ -253,14 +253,14 @@ extension PhotoViewModel {
         let error: AnyPublisher<TrackErrors<PhotoResultType>, Never>
         let pageInfo: AnyPublisher<String, Never>
     }
-    
+
     enum PhotoResultType: Hashable {
         case initial
         case refresh
         case loadMore(Int, Int)
         case search(Bool) // thieu dieu kien bat dau vaf ket thuc
     }
-    
+
     struct PhotoResult {
         let type: PhotoResultType
         let items: [PhotoEntity]

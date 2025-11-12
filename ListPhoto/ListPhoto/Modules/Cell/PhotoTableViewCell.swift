@@ -5,28 +5,28 @@ import Combine
 
 class PhotoTableViewCell: UITableViewCell {
     private var disposeBag: Set<AnyCancellable> = []
-    
+
     private let heightText: CGFloat = 17
     private var heightPhoto: CGFloat = 0.0
     private let paddingLeft: CGFloat = 15
     private var heightConstraintPhoto: NSLayoutConstraint?
     private lazy var imagePhoto = UIImageView()
-    
+
     var namePhotolb = UILabel()
     var sizePhotolb = UILabel()
     private var currentImageUrl: String?
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpView()
         addView()
         constraint()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         currentImageUrl = nil
@@ -44,22 +44,22 @@ extension PhotoTableViewCell {
         contentView.addSubview(namePhotolb)
         contentView.addSubview(sizePhotolb)
     }
-    
+
     private func setUpView() {
         self.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
         self.selectionStyle = .none
-        
+
         configImage()
         configNamelb()
         configSizelb()
     }
-    
+
     private func configImage() {
         imagePhoto.contentMode = .scaleAspectFill
         imagePhoto.clipsToBounds = true
         imagePhoto.translatesAutoresizingMaskIntoConstraints = false
     }
-    
+
     private func configNamelb() {
         namePhotolb.textColor = .black.withAlphaComponent(0.8)
         namePhotolb.numberOfLines = 1
@@ -67,7 +67,7 @@ extension PhotoTableViewCell {
         namePhotolb.textAlignment = .left
         namePhotolb.translatesAutoresizingMaskIntoConstraints = false
     }
-    
+
     private func configSizelb() {
         sizePhotolb.numberOfLines = 1
         sizePhotolb.textColor = .black.withAlphaComponent(0.8)
@@ -88,13 +88,13 @@ extension PhotoTableViewCell {
         heightConstraintPhoto = imagePhoto.heightAnchor.constraint(equalToConstant: 100)
         heightConstraintPhoto?.priority = .defaultHigh
         heightConstraintPhoto?.isActive = true
-        
+
         NSLayoutConstraint.activate([
             namePhotolb.topAnchor.constraint(equalTo: imagePhoto.bottomAnchor, constant: 15),
             namePhotolb.heightAnchor.constraint(equalToConstant: heightText),
             namePhotolb.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: paddingLeft),
             namePhotolb.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -paddingLeft),
-            
+
             sizePhotolb.topAnchor.constraint(equalTo: namePhotolb.bottomAnchor, constant: 5),
             sizePhotolb.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: paddingLeft),
             sizePhotolb.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -paddingLeft),
@@ -107,7 +107,7 @@ extension PhotoTableViewCell {
 extension PhotoTableViewCell {
     func bindingData(with photo: PhotoEntity, height: Int, isScrollingFast: Bool = false) {
         currentImageUrl = photo.downloadURL
-        
+
         heightConstraintPhoto?.constant = CGFloat(height)
 
         let input = ImageDownloader.Input(url: photo.downloadURL)
@@ -138,7 +138,7 @@ extension PhotoTableViewCell {
                         }
                     }
                     .store(in: &self.disposeBag)
-                
+
                 // Image
                 output.image
                     .sink { [weak self] image in
@@ -151,7 +151,7 @@ extension PhotoTableViewCell {
                         self.imagePhoto.setNeedsLayout()
                     }
                     .store(in: &self.disposeBag)
-                
+
                 // Error
                 output.error
                     .receive(on: DispatchQueue.main)

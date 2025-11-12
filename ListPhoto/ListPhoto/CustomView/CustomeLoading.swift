@@ -14,18 +14,18 @@ class CustomLoading: UIImageView {
         setupImageView()
         startRotatingImage()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupImageView()
         startRotatingImage()
     }
-    
+
     private func setupImageView() {
         self.contentMode = .scaleAspectFit
         self.image = UIImage(named: "loading")
     }
-    
+
     private func startRotatingImage() {
         let rotation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotation.toValue = CGFloat.pi * 2

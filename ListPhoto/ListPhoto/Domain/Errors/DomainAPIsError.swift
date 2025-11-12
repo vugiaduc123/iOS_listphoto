@@ -11,13 +11,13 @@ public enum DomainAPIsError: Error, LocalizedError {
     // MARK: - Request formation
     case invalidURL
     case invalidRequest          // thêm — lỗi khi tạo URLRequest
-    
+
     // MARK: - Transport (network layer)
     case noInternet
     case timeout
     case requestFailed(Error)
     case cancelled               // thêm — người dùng hủy request
-    
+
     // MARK: - Response handling
 //    case invalidResponse
     case invalidStatusCode(Int)  // thêm — để biết cụ thể code
@@ -25,12 +25,12 @@ public enum DomainAPIsError: Error, LocalizedError {
     case serverError(Int)        // 500...599
     case invalidMinType         // mime type sai
 //    case invalidData             // data rỗng hoặc không đúng format
-    
+
     // MARK: - Decoding & Parsing
     case decodingFailed
     case deCodingError
     case endCodingError
-    
+
     // MARK: - Retry & unknown
     case maxRetriesReached
     case unknown
@@ -74,4 +74,13 @@ extension DomainAPIsError {
         }
     }
 
+}
+
+extension DomainAPIsError {
+    var shouldRetry: Bool {
+        switch self {
+        case .serverError, .timeout, .noInternet: return true
+        default: return false
+        }
+    }
 }

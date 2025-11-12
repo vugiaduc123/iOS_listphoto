@@ -17,7 +17,7 @@ class DefaultPhotoGenerateListNavigator: GenerateListNavigator {
         let photoProvider = APIPhotoUsecaseProvider()
         let photoViewModel = PhotoViewModel(useCase: photoProvider.makePhotoUseCase())
         let photoViewController = ListPhotoViewController(viewModel: photoViewModel)
-        
+
         navigationController?.pushViewController(photoViewController, animated: true)
     }
 }

@@ -13,7 +13,7 @@ extension URLRequest {
         request.httpMethod = method.rawValue
         return request
     }
-    
+
     func setHeader(_ headers: [String: String]?) -> URLRequest {
         var request = self
         if let headers = headers {
@@ -23,13 +23,13 @@ extension URLRequest {
         }
         return request
     }
-    
+
     func setTimeout(_ timeout: TimeInterval) -> URLRequest {
         var request = self
         request.timeoutInterval = timeout
         return request
     }
-    
+
     func setJSONBody(_ method: HTTPMethod, with parameters: [String: Any]?) -> URLRequest {
         guard let params = parameters, !params.isEmpty else { return self }
         var request = self
@@ -47,7 +47,7 @@ extension URLRequest {
                 fatalError("SetJSONBody: \(DomainAPIsError.endCodingError)")
             }
         }
-        
+
         return request
     }
 }

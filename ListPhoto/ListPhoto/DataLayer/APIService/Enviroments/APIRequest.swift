@@ -21,10 +21,10 @@ extension APIRequest {
         }
         return url
     }
-    
+
     func displayInformation() {
         print("Path URL: \(path)")
         print("Full URL: \(String(describing: fullURL))")
     }
-    
+
 }

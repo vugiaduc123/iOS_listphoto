@@ -15,17 +15,17 @@ class WelcomeViewController: BaseViewController {
     let destinationBtn = UIButton()
     let monitor = NWPathMonitor()
     var connectNetwork: Bool = false
-    
+
     private lazy var navigator: GenerateListNavigator = {
         var navigator = DefaultPhotoGenerateListNavigator()
         return navigator
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addView()
         setUpView()
-        
+
         destinationBtn
             .publisher(for: .touchUpInside)
             .sink { [weak self] _ in

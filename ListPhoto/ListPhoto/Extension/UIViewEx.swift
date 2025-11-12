@@ -8,12 +8,12 @@ import UIKit
 // MARK: Skeleton Extension
 extension UIView {
     private static let shimmerAnimationKey = "shimmer"
-    
+
     func showSkeleton() {
         DispatchQueue.main.async {
             // Xóa skeleton cũ đồng bộ
             self.layer.sublayers?.removeAll(where: { $0.name == "skeletonGradient" })
-            
+
             // Tạo gradient layer
             let gradientLayer = CAGradientLayer()
             gradientLayer.name = "skeletonGradient"
@@ -27,7 +27,7 @@ extension UIView {
                 UIColor(white: 0.85, alpha: 1.0).cgColor
             ]
             gradientLayer.locations = [0, 0.5, 1]
-            
+
             // Animation
             let animation = CABasicAnimation(keyPath: "locations")
             animation.fromValue = [-1.0, -0.5, 0]
@@ -35,11 +35,11 @@ extension UIView {
             animation.duration = 1.2
             animation.repeatCount = .infinity
             gradientLayer.add(animation, forKey: UIView.shimmerAnimationKey)
-            
+
             self.layer.addSublayer(gradientLayer)
         }
     }
-    
+
     func hideSkeleton() {
         DispatchQueue.main.async {
             self.layer.sublayers?.removeAll(where: { $0.name == "skeletonGradient" })

@@ -36,9 +36,7 @@ extension UIControl {
                 control.addTarget(self, action: #selector(eventHandler), for: event)
             }
 
-            func request(_ demand: Subscribers.Demand) {
-                // Không cần xử lý demand cho UIControl events
-            }
+            func request(_ demand: Subscribers.Demand) { }
 
             func cancel() {
                 control?.removeTarget(self, action: #selector(eventHandler), for: event)

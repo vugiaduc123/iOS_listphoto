@@ -16,7 +16,7 @@ extension PhotoDTOs {
                            url: url,
                            downloadURL: downloadURL)
     }
-    
+
     static func fromEntity(_ entity: PhotoEntity) -> PhotoDTOs {
         return PhotoDTOs(id: entity.id,
                          author: entity.author,

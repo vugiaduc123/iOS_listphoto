@@ -12,7 +12,7 @@ import Combine
 
 final class APIPhotoUsecase: PhotoUseCase {
     private let request = PhotoListRequest()
-    
+
     func fetchPhotos(page: Int, limit: Int) -> AnyPublisher<[PhotoEntity], DomainAPIsError> {
         request.request(method: .get, parameters: ["page": page, "limit": limit])
             .map({ dtos in

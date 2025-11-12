@@ -13,19 +13,19 @@ class PresentViewQR: NSObject {
     private var window = UIWindow()
     private var overlayView = UIView()
     private let qrImageView = UIImageView()
-    
+
     private override init() {
         super.init()
         configureFrameWindow()
-        
+
         if overlayView.superview == nil {
             configrueOverlayView()
-            
+
             setUpStyleView()
             addSubviewsToOverlay()
             setUpConstraint()
         }
-        
+
         overlayView.isHidden = false
         overlayView.alpha = 0
     }
@@ -37,7 +37,7 @@ extension PresentViewQR {
             if let windowScene = UIApplication.shared.connectedScenes
                 .compactMap({ $0 as? UIWindowScene })
                 .first(where: { $0.activationState == .foregroundActive }) {
-                
+
                 if let keyWindow = windowScene.windows.first(where: { $0.isKeyWindow }) {
                     window = keyWindow
                 } else {
@@ -52,13 +52,13 @@ extension PresentViewQR {
             }
         }
     }
-    
+
     private func configrueOverlayView() {
         // style
         overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         overlayView.tag = 333
         overlayView.isHidden = true
-        
+
         // adTarget
         overlayView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(remove(_:)))
@@ -68,25 +68,25 @@ extension PresentViewQR {
             // add View
             window.addSubview(overlayView)
         }
-        
+
         constraintOverlayView()
     }
-    
+
     private func addSubviewsToOverlay() {
         overlayView.addSubview(qrImageView)
     }
-    
+
     private func setUpStyleView() {
         setupImageView()
         startRotatingImage()
         qrImageView.translatesAutoresizingMaskIntoConstraints = false
     }
-    
+
     private func setupImageView() {
         qrImageView.contentMode = .scaleAspectFit
         qrImageView.image = UIImage(named: "indicator")
     }
-    
+
     private func startRotatingImage() {
         let rotation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotation.toValue = CGFloat.pi * 2
@@ -94,11 +94,11 @@ extension PresentViewQR {
         rotation.repeatCount = .infinity
         qrImageView.layer.add(rotation, forKey: "rotationAnimation")
     }
-    
+
     private func setUpConstraint() {
         constraintViewContainer()
     }
-    
+
     private func constraintOverlayView() {
         NSLayoutConstraint.activate([
             self.overlayView.topAnchor.constraint(equalTo: self.window.topAnchor),
@@ -107,7 +107,7 @@ extension PresentViewQR {
             self.overlayView.trailingAnchor.constraint(equalTo: self.window.trailingAnchor)
         ])
     }
-    
+
     private func constraintViewContainer() {
         NSLayoutConstraint.activate([
             self.qrImageView.centerXAnchor.constraint(equalTo: self.overlayView.centerXAnchor),
@@ -121,24 +121,21 @@ extension PresentViewQR {
 // MARK: Handler
 extension PresentViewQR {
     func showView(show: Bool) {
-//        DispatchQueue.main.async { [weak self] in
-//            guard let self = self else { return }
-            if show {
-                UIView.animate(withDuration: 0.5) { [weak self] in
-                    guard let self = self else { return }
-                    overlayView.alpha = 1
-                    overlayView.isHidden = false
-                }
-            } else {
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.overlayView.alpha = 0
-                }) { _ in
-                    self.overlayView.isHidden = true
-                }
+        if show {
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                guard let self = self else { return }
+                overlayView.alpha = 1
+                overlayView.isHidden = false
             }
-//        }
+        } else {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.overlayView.alpha = 0
+            }) { _ in
+                self.overlayView.isHidden = true
+            }
+        }
     }
-    
+
     @objc func remove(_ sender: UITapGestureRecognizer) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
