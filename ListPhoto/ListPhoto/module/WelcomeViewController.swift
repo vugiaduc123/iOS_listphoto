@@ -7,30 +7,36 @@
 
 import UIKit
 import Network
-import Combine
-class WelcomeViewController: BaseViewController {
+class WelcomeViewController: UIViewController {
     let paddingItem:CGFloat = 20
     let welcomeLabel = UILabel()
     let backgroundImage = UIImageView()
     let destinationBtn = UIButton()
     let monitor = NWPathMonitor()
+
     var connectNetwork: Bool = false
+<<<<<<< HEAD:ListPhoto/ListPhoto/Modules/WelcomeViewController.swift
 
     private lazy var navigator: GenerateListNavigator = {
         var navigator = DefaultPhotoGenerateListNavigator()
         return navigator
     }()
 
+=======
+>>>>>>> 3404a3230b2633a709d53b397211244b9c4e1f7e:ListPhoto/ListPhoto/module/WelcomeViewController.swift
     override func viewDidLoad() {
         super.viewDidLoad()
         addView()
         setUpView()
+<<<<<<< HEAD:ListPhoto/ListPhoto/Modules/WelcomeViewController.swift
 
         destinationBtn
             .publisher(for: .touchUpInside)
             .sink { [weak self] _ in
                 self?.navigator.openDetailListPhoto(self?.navigationController)
             }.store(in: &disposeBag)
+=======
+>>>>>>> 3404a3230b2633a709d53b397211244b9c4e1f7e:ListPhoto/ListPhoto/module/WelcomeViewController.swift
     }
 }
 
@@ -75,7 +81,7 @@ extension WelcomeViewController {
         destinationBtn.backgroundColor = .black
         destinationBtn.layer.cornerRadius = 15
         destinationBtn.clipsToBounds = true
-//        destinationBtn.addTarget(self, action: #selector(destinationPhoto), for: .touchUpInside)
+        destinationBtn.addTarget(self, action: #selector(destinationPhoto), for: .touchUpInside)
         destinationBtn.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
@@ -90,6 +96,30 @@ extension WelcomeViewController {
 // MARK: Function
 extension WelcomeViewController {
     @objc func destinationPhoto(sender: UIButton){
-        self.navigator.openDetailListPhoto(self.navigationController)
+        if let navi = self.navigationController {
+            PhotoNavigator(navigationController: navi).navigateToEventScreen()
+            return
+        }
+    }
+
+    func checkNetwork() {
+        NetworkMonitor.shared.startMonitoring()
+        DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
+            guard let strongSelf = self else { return }
+            if NetworkMonitor.shared.isConnected {
+                print("Device on wifi: \(NetworkMonitor.shared.connectionType)")
+                strongSelf.connectNetwork = true
+            } else {
+                print("Device not connected wifi.")
+                strongSelf.connectNetwork = false
+                strongSelf.showAlert(title: "Thông báo", message: "Thiết bị mất mạng.")
+            }
+        }
+    }
+
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil)) // Nút OK
+        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension UIImage {
+<<<<<<< HEAD
     func renderImage() -> UIImage {
         let maxDimensionDeviceCurrent = max(GraphicImage.getRecommendGraphic().width,
                                GraphicImage.getRecommendGraphic().height)
@@ -50,4 +51,19 @@ extension UIImage {
         return self
     }
 
+=======
+    func resized(to targetSize: CGSize) -> UIImage? {
+        let renderer = UIGraphicsImageRenderer(size: targetSize)
+        return renderer.image { _ in
+            self.draw(in: CGRect(origin: .zero, size: targetSize))
+        }
+    }
+    func resizedWithAspectFit(maxWidth: CGFloat, maxHeight: CGFloat) -> UIImage? {
+        let aspectWidth = maxWidth / size.width
+        let aspectHeight = maxHeight / size.height
+        let aspectRatio = min(aspectWidth, aspectHeight)
+        let newSize = CGSize(width: size.width * aspectRatio, height: size.height * aspectRatio)
+        return resized(to: newSize)
+    }
+>>>>>>> 3404a3230b2633a709d53b397211244b9c4e1f7e
 }

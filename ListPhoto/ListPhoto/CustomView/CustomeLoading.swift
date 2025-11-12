@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class CustomLoading: UIImageView {
+//    private let imageView = UIImageView()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupImageView()
@@ -22,15 +24,17 @@ class CustomLoading: UIImageView {
     }
 
     private func setupImageView() {
+//        addSubview(imageView)
+//        self.frame = self.bounds
         self.contentMode = .scaleAspectFit
         self.image = UIImage(named: "loading")
     }
 
     private func startRotatingImage() {
-        let rotation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotation.toValue = CGFloat.pi * 2
-        rotation.duration = 3
-        rotation.repeatCount = .infinity
+         let rotation = CABasicAnimation(keyPath: "transform.rotation.z")
+         rotation.toValue = CGFloat.pi * 2
+         rotation.duration = 3
+         rotation.repeatCount = .infinity
         self.layer.add(rotation, forKey: "rotationAnimation")
-    }
+     }
 }

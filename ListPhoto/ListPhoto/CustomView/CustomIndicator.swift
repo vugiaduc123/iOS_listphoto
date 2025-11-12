@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+<<<<<<< HEAD
 class PresentViewQR: NSObject {
     static let shared = PresentViewQR()
     private var window = UIWindow()
@@ -77,10 +78,17 @@ extension PresentViewQR {
     }
 
     private func setUpStyleView() {
+=======
+class CustomLoadingIndicator: UIView {
+    private let imageView = UIImageView()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+>>>>>>> 3404a3230b2633a709d53b397211244b9c4e1f7e
         setupImageView()
         startRotatingImage()
-        qrImageView.translatesAutoresizingMaskIntoConstraints = false
     }
+<<<<<<< HEAD
 
     private func setupImageView() {
         qrImageView.contentMode = .scaleAspectFit
@@ -145,5 +153,27 @@ extension PresentViewQR {
                 self.overlayView.isHidden = true
             }
         }
+=======
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupImageView()
+        startRotatingImage()
     }
+
+    private func setupImageView() {
+        addSubview(imageView)
+        imageView.frame = self.bounds
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "indicator")
+>>>>>>> 3404a3230b2633a709d53b397211244b9c4e1f7e
+    }
+
+    private func startRotatingImage() {
+         let rotation = CABasicAnimation(keyPath: "transform.rotation.z")
+         rotation.toValue = CGFloat.pi * 2
+         rotation.duration = 3
+         rotation.repeatCount = .infinity
+         imageView.layer.add(rotation, forKey: "rotationAnimation")
+     }
 }

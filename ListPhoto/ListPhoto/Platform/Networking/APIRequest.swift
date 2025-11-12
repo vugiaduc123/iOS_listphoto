@@ -11,13 +11,17 @@ protocol APIRequest {
     var environment: APIEnvironment { get }
     var path: String { get }
     var headers: [String: String]? { get }
-    func fullURL() -> URL
+    func fullURL(with parameters: [String: Any]?) -> URL
 }
 
 extension APIRequest {
-    func fullURL() -> URL {
-        guard let url = URL(string: "\(environment.baseURL + path)") else {
-            fatalError(DomainAPIsError.invalidURL.localizedDescription)
+    func fullURL(with parameters: [String: Any]?) -> URL {
+        var components = URLComponents(string: environment.baseURL + path)
+        if let params = parameters {
+            components?.queryItems = params.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+        }
+        guard let url = components?.url else {
+            fatalError("Invalid URL")
         }
         return url
     }
